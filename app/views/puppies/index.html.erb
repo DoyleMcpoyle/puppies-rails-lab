@@ -1,0 +1,14 @@
+<h1>Here are our puppies!</h1>
+
+<% @puppies.each do |puppy| %>
+<p>
+<%= puppy.name %>, <%= puppy.age %>, <%= puppy.breed %>
+<%= link_to "First link", "/puppies/#{puppy.id}" %>
+</p>
+
+<% end %>
+
+<a href="/puppies/new">Add a puppy!</a>
+
+<!-- Or do link_to -->
+<%= link_to "Add a puppy", "/puppies/new" %>
